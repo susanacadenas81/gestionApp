@@ -1,0 +1,13 @@
+
+  <fieldset>
+    <legend>Borrar cliente</legend>
+    <div class="form-group">
+      Introduzca el dni del cliente que desea borrar: <input [(ngModel)]="dni" type="text" name="dni" id="dni">
+      <hr/>
+      </div>
+  </fieldset>
+
+
+ <button class="btn btn-success" (click)="borrar()">Borrar Cliente</button>
+
+ <!--cuando se borre pasar a cliente borrado con un if por ejemplo--> 

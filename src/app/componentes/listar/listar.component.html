@@ -1,0 +1,21 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">DNI</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Residente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active" *ngFor="let cliente of clientes">
+      <th scope="row">{{cliente.dni}}</th>
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.direccion}}</td>
+      <td>{{cliente.edad}}</td>
+      <td>{{cliente.residente}}</td>
+    </tr>
+  </tbody>
+</table> 
+<button class="btn btn-primary" routerLink="/homepage">VOLVER</button>

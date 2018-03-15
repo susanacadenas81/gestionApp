@@ -8,6 +8,11 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './componentes/homepage/homepage.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { RegistrarClienteComponent } from './componentes/registrar-cliente/registrar-cliente.component';
+import { ClientesComponent } from './componentes/clientes/clientes.component';
+import { BorrarClienteComponent } from './componentes/borrar-cliente/borrar-cliente.component';
+import { ListarComponent } from './componentes/listar/listar.component';
+import { ModificarComponent } from './componentes/modificar/modificar.component';
+import { ClienteComponent } from './componentes/clientes/cliente/cliente.component';
 
 
 @NgModule({
@@ -15,7 +20,12 @@ import { RegistrarClienteComponent } from './componentes/registrar-cliente/regis
     AppComponent,
     HomepageComponent,
     NavbarComponent,
-    RegistrarClienteComponent
+    RegistrarClienteComponent,
+    ClientesComponent,
+    BorrarClienteComponent,
+    ListarComponent,
+    ModificarComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ClienteComponent } from '../clientes/cliente/cliente.component';
 @Component({
   selector: 'app-registrar-cliente',
   templateUrl: './registrar-cliente.component.html',
@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrarClienteComponent{
 
-  dni:string=""
+  dni:String=""
   nombre:String=""
   direccion:String=""
-  edad:Number=0
+  edad:Number
   residente:Boolean=false
+  cliente:ClienteComponent
+  clientes:any=[]
+
 
   constructor() { }
   noresidente(){
@@ -19,6 +22,18 @@ export class RegistrarClienteComponent{
   }
 
   reg(){
-	alert(this.residente);
+  this.cliente=new ClienteComponent(this.dni,this.nombre,this.direccion,this.edad,this.residente);
+  localStorage.clientes!==undefined?this.clientes=JSON.parse(localStorage.clientes):this.clientes;
+  this.clientes.push(this.cliente);
+  localStorage.clientes = JSON.stringify(this.clientes);
+  this.clearForm();
   }
+  clearForm(){
+  this.dni="";
+  this.nombre="";
+  this.direccion="";
+  this.edad=undefined;
+  this.residente=false;
+  }
+
 }
